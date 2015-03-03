@@ -1,0 +1,49 @@
+# .gitignore
+#In dieser Datei lassen sich Dateien und Verzeichnisse angeben, die nicht versioniert/zum Repository hinzugefügt werden sollen.
+#Beispiele:
+# ignoriert alle Dateien, die mit .a enden
+#*.a
+# nicht aber lib.a Dateien (obwohl obige Zeile *.a ignoriert)
+#!lib.a
+# ignoriert eine TODO Datei nur im Wurzelverzeichnis, nicht aber
+#/TODO
+# ignoriert alle Dateien im build/ Verzeichnis
+#build/
+# ignoriert doc/notes.txt, aber nicht doc/server/arch.txt
+#doc/*.txt
+# ignoriert alle .txt Dateien unterhalb des doc/ Verzeichnis
+#doc/**/*.txt
+# ** steht fuer kein, ein oder mehrere Verzeichnisse
+#Platzhalter fuer ein beliebiges Zeichen
+# ?
+#Platzhalter fuer eines der angegebenen Zeichen
+#[abc]
+#Platzhalter fuer eines der Zeihen aus dem Zahlenbereich
+#[0-9]
+
+# gitignore-Datei nicht tracken
+#.gitignore
+
+# OS generated files
+#MAC
+.DS_Store
+.DS_Store?
+.TRASHES
+*.~si
+
+#WIN
+Thumbs.db
+
+#Compiled sources
+*.class
+*.com
+*.dll
+*.exe
+*.o
+*.so
+
+#Latex files
+*.aux
+*.log
+*.synctex.gz
+*.toc
