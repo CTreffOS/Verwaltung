@@ -1,0 +1,126 @@
+\documentclass[a4paper,10pt]{scrartcl}
+
+
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{xspace}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+
+\usepackage[left=20mm,top=10mm,bottom=10mm,right=20mm]{geometry}
+
+\setlength\parindent{0pt}
+
+\setitemize[0]{labelwidth=1.5cm,itemindent=1.15cm,leftmargin=1.0cm,align=left}
+
+\def\textfieldwidth{6cm}%
+
+\newcommand*{\uTextField}[3]{%
+  \underline{%
+    \mbox{\TextField[name=#1,width=#2,charsize=9pt,bordercolor=white]{%
+      \baselineskip=10pt%
+    #3}%
+    }%
+  }%
+}%
+
+\newcommand*{\umakebox}{%
+  \underline{%
+    \makebox[10.0cm]{%
+      \baselineskip=10pt%
+    }%
+  }%
+}%
+
+\newcommand*{\ccbox}[1]{%
+  \mbox{\CheckBox[name=#1,height=0.30cm,width=0.30cm,bordercolor=black]{~}}\xspace%
+}%
+
+\begin{document}
+
+
+\thispagestyle{empty}
+
+\begin{Form}
+
+\begin{minipage}{6cm}
+\includegraphics[scale=0.3]{ctreffos-logo.pdf}
+\end{minipage}
+%
+\begin{minipage}{11cm}
+\flushright
+
+\textbf{Chaostreff Osnabrück e.V.} \\
+1. Vorsitzender \\
+Hansastraße 25\\
+49090 Osnabrück\\
+\begin{footnotesize}
+%\compassaddr
+\end{footnotesize}
+\end{minipage}
+
+\vspace{0.6cm}
+
+\begin{center}
+\textbf{\Large Antrag auf Mitgliedschaft im Chaostreff Osnabrück e.V. }
+\end{center}
+
+\vspace{0.4cm}
+
+Hiermit beantrage ich:
+
+\begin{center}
+\begin{tabular}{llll}
+  Name$^{\ast}$    & \uTextField{name}{\textfieldwidth}{} & Geburtsdatum & \uTextField{geb}{5.5cm}{} \\\\
+  Straße$^{\ast}$ & \uTextField{str}{\textfieldwidth}{}  & PLZ/Ort$^{\ast}$ & \uTextField{plz}{5.5cm}{} \\\\
+  E-Mail$^{\ast}$   & \uTextField{mail}{\textfieldwidth}{} & Telefon & \uTextField{tel}{5.5cm}{} \\\\
+  GPG Fingerprint & \uTextField{gpg}{\textfieldwidth}{} &  \\
+\end{tabular}
+\end{center}
+
+die Mitgliedschaft im Chaostreff Osnabrück e.V. als
+
+\begin{itemize}
+  \item[\ccbox{prp} Privatperson]
+  \item[\ccbox{prpv} Privatperson, vergünstigt$^{\ast\ast}$]
+  \item[\ccbox{ges} Firma / Gesellschaft / Verein]
+\end{itemize}
+
+Der aktuelle Mitgliedsbeitrag und Zahlungsbedingungen sind der Beitragsordnung des Vereins zu entnehmen.
+
+\subsubsection*{Zahlungsmöglichkeiten}
+Die Zahlung des Mitgliesbeitrages erfolgt per
+
+\begin{itemize}
+  \item[\ccbox{buew} Banküberweisung] auf folgendes Konto:
+  	\textbf{IBAN} DE...........
+  	\textbf{BIC} ........
+
+  \item[\ccbox{sepa} Barzahlung, zu vereinbarten Terminen nach Ankündigung des Schatzmeisters ]
+\end{itemize}
+
+
+\subsubsection*{Einverständniserklärung}
+Hiermit bestätige ich, dass alle gemachten Angaben der Wahrheit entsprechen und ich die Satzung des Chaostreff Osnabrück e.V. zur Kenntnis genommen habe und anerkenne. Ich bin darüber im klaren das die Mitgliedschaft automatisch jährlich fortgesetzt wird und somit eine Beitragszahlung fällig ist, sofern kein Grund für die Beendigung der Mitgliedschaft vorliegt.  Näheres hierzu entnehme ich \textit{§3 Mitgliedschaft} der Satzung. \\
+
+\medskip
+
+\begin{center}
+\begin{tabular}{cc}
+  \uTextField{od2}{5cm}{} & \umakebox \\
+Ort, Datum ~ & ~ Unterschrift (bei Minderjährigen der Erziehungsberechtigte)\\[0pt]% adds space between the two sets of signatures
+\end{tabular}
+\end{center}
+
+\vspace{0.8cm}
+
+{\footnotesize $~^{\ast}$ Pflichtfelder} \\
+{\footnotesize $~^{\ast\ast}$ Ob ein Vergünstigungsgrund vorliegt, entscheidet der Vorstand.} \\
+
+\end{Form}
+
+\end{document}
