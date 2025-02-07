@@ -47,3 +47,4 @@ Thumbs.db
 *.log
 *.synctex.gz
 *.toc
+*.out
